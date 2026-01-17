@@ -1,0 +1,22 @@
+attack_label_trans: all2one
+attack_target: 0
+pratio: 0.1
+attack: wpti
+beta: 0.125
+wpti_stats_path: ./resource/wpti/wpti_stats.pkl
+save_bd_dataset: true
+
+pca:
+  wavelet: haar
+  level: 1
+  decomp: wpd
+  top_energy_nodes: 1
+  # WPD 子带选择策略：min=选能量(幅值)最低的子带，max=选能量最高的子带
+  wpd_energy_select: min
+  exclude_lowpass_nodes: true
+  # WPD 边界模式（pywt WaveletPacket2D mode），默认 symmetric
+  wpd_mode: symmetric
+  tail_dim: 1
+  pca_sample_images: 5000
+  # 触发方向选择：minvar(默认) / maxvar / random
+  direction_mode: minvar

@@ -1,0 +1,23 @@
+attack_label_trans: all2one
+attack_target: 0
+pratio: 0.1
+attack: wpti
+beta: 0.2
+wpti_stats_path: ./resource/wpti/wpti_stats.pkl
+
+pca:
+  wavelet: haar
+  # imagenette 使用一级分解（level=1）
+  level: 1
+  decomp: wpd
+  top_energy_nodes: 1
+  # 选平均能量(幅值)最低的子带
+  wpd_energy_select: min
+  exclude_lowpass_nodes: true
+  # 回到默认边界模式
+  wpd_mode: symmetric
+  tail_dim: 1
+  pca_sample_images: 5000
+  # 默认最小方差方向
+  direction_mode: minvar
+
